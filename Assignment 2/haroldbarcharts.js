@@ -23,7 +23,7 @@ d3.json("https://api.thingspeak.com/channels/345243/fields/2.json?start=2017-11-
       d.distance = Number(d.field2);
     });
 
-      console.log(hourlydata);
+      //console.log(hourlydata);
 
     var newhourlydata = d3.nest()
       //.key(function(d) { return d.hour;})
@@ -32,7 +32,7 @@ d3.json("https://api.thingspeak.com/channels/345243/fields/2.json?start=2017-11-
       .rollup(function(d) { return d3.sum(d, function(d) { return d.distance; }); })
       .entries(hourlydata.feeds);
 
-    console.log(newhourlydata);
+    //console.log(newhourlydata);
 
     newhourlydata.forEach(function(d){
       // Turn the date into the hour (00-23)
@@ -41,7 +41,7 @@ d3.json("https://api.thingspeak.com/channels/345243/fields/2.json?start=2017-11-
       d.distance = Number(d.value);
     });
 
-console.log(newhourlydata);
+//console.log(newhourlydata);
 
 // Start of a bart chart to show the total distance day of the week
 // Nice to see which hours Harold is most active and when he's asleep
@@ -73,7 +73,7 @@ d3.json("https://api.thingspeak.com/channels/345243/fields/2.json?start=2017-11-
       d.distance = Number(d.field2);
     });
 
-      console.log(hourlydata);
+    //  console.log(hourlydata);
 
     var newhourlydata = d3.nest()
       .key(function(d) { return d.hour;})
@@ -91,7 +91,7 @@ d3.json("https://api.thingspeak.com/channels/345243/fields/2.json?start=2017-11-
       d.distance = Number(d.value);
     });
 
-console.log(newhourlydata);
+//console.log(newhourlydata);
 
 // var min = d3.min(newhourlydata, function(d){return d.distance});
 // var max = d3.max(newhourlydata, function(d){return d.distance});
