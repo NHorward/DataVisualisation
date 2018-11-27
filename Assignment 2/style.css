@@ -1,8 +1,13 @@
 html, body {
   margin: 0;
   height: 100%;
-  font-family: 'Pacifico', cursive;
+  font-family: 'Comfortaa', cursive;
 }
+
+h1, p {
+  margin-left: 5%;
+}
+
 
 line {
   stroke: red;
