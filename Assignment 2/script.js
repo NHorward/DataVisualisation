@@ -10,7 +10,7 @@
 // Parse date
 var parseDateTime = d3.timeParse("%Y-%m-%d %H:%M:%S");
 // Append SVG element to the HTML body
-var svg = d3.select("body").append("svg").attr("height","50%").attr("width","100%");
+var svg = d3.select("body").append("svg").attr("height","70%").attr("width","100%");
 
 // Empty array to contain all the relevant data
 var data =[];
@@ -49,7 +49,7 @@ d3.csv("HaroldData2018.csv", function(hourlydata) {
       .sortKeys(d3.ascending)
       .key(function(d) { return d.created_at.getHours();})
       // Summarise the distance data per day and per hour
-      .rollup(function(v) { return d3.sum(v, function(d) { return d.field2; }); })
+      .rollup(function(v) { return d3.mean(v, function(d) { return d.field2; }); })
       .entries(hourlydata);
 
   // console.log(newhourlydata);
@@ -99,10 +99,10 @@ d3.csv("HaroldData2018.csv", function(hourlydata) {
     .data(data)
     .enter()
     .append("rect")
-    .attr("x", function(d, i){ return marginLeft + d.hour * 42;})
-    .attr("y", function(d){ return marginTop +  d.day * 42;})
-    .attr("width", 40)
-    .attr("height", 40)
+    .attr("x", function(d, i){ return marginLeft + d.hour * 60;})
+    .attr("y", function(d){ return marginTop +  d.day * 60;})
+    .attr("width", 55)
+    .attr("height", 55)
     .style("fill", function(d){ return colorScale(d.value); });
 
     // Make the heatmap interactive
@@ -112,7 +112,7 @@ d3.csv("HaroldData2018.csv", function(hourlydata) {
     // On mouse enter, change the opacity and show the value in the paragraph above
       .on("mouseenter", function(d, i) {
           d3.select(this).attr("opacity", 0.5);
-          $("#distance").text("Total distance recorded: " + String(d.value.toFixed(2)) + " km");
+          $("#distance").text("Average distance recorded: " + String(d.value * 1000) + " meters");
 
 
       })
@@ -129,9 +129,9 @@ d3.csv("HaroldData2018.csv", function(hourlydata) {
              .enter().append("text")
                .text(function (d) { return d; })
                .attr("x", 50)
-               .attr("y", function(d, i){ return marginTop + i * 42;})
+               .attr("y", function(d, i){ return marginTop + i * 60;})
                .style("text-anchor", "end")
-               .attr("transform", "translate(-6," + 42 / 1.5 + ")");
+               .attr("transform", "translate(-6," + 60 / 1.5 + ")");
 
       // Add the labels to the x and y axis
       // Source: Day/hour heatmap in v4, takayki via http://bl.ocks.org/ganezasan/dfe585847d65d0742ca7d0d1913d50e1 Date of reference: 26th of November 2018
@@ -140,10 +140,10 @@ d3.csv("HaroldData2018.csv", function(hourlydata) {
              .data(times)
              .enter().append("text")
                .text(function (d) { return d; })
-               .attr("x", function(d, i){return  marginLeft + i * 42;})
+               .attr("x", function(d, i){return  marginLeft + i * 60;})
                .attr("y", 50)
                .style("text-anchor", "middle")
-               .attr("transform", "translate(" + 42 / 2 + ", -6)");
+               .attr("transform", "translate(" + 60 / 2 + ", -6)");
 
 
 
