@@ -1,0 +1,14 @@
+[
+  { "name":"mouse", "weight": 0.019 },
+  { "name":"bat", "weight": 0.033 },
+  { "name":"cat", "weight": 4.05 },
+  { "name":"dog", "weight": 22.6 },
+  { "name":"ant", "weight": 0.000005 },
+  { "name":"grasshopper", "weight": 0.0054 },
+  { "name":"butterfly", "weight": 0.0003 },
+  { "name":"kangaroo", "weight": 28 },
+  { "name":"koala", "weight": 9.5 },
+  { "name":"penguin", "weight": 33.5 },
+  { "name":"parrot", "weight": 3 },
+  { "name":"toucan", "weight": 0.620 }
+]
