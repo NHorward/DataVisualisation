@@ -3,42 +3,91 @@
 
 // Data
 //House mouse, Wikipedia, https://en.wikipedia.org/wiki/House_mouse Date of Reference: 25th of December 2018.
-// https://en.wikipedia.org/wiki/Common_vampire_bat
+// https://en.wikipedia.org/wiki/Barn_owl
 // https://en.wikipedia.org/wiki/Cat
-// https://en.wikipedia.org/wiki/Red_kangaroo
-// https://en.wikipedia.org/wiki/Koala
-// https://en.wikipedia.org/wiki/Emperor_penguin
-// https://en.wikipedia.org/wiki/Kakapo
-// https://en.wikipedia.org/wiki/Toco_toucan
-
+// https://en.wikipedia.org/wiki/Atlantic_salmon
+//https://en.wikipedia.org/wiki/Holland_Lop
+//https://en.wikipedia.org/wiki/Booted_Bantam
+// https://en.wikipedia.org/wiki/Black_mamba
 // https://www.yourpurebredpuppy.com/dogbreeds/index-medium-dog-breeds.html
-// Are all the ants as heavy as all the humans? BBC News Magazine, https://www.bbc.com/news/magazine-29281253
-// http://www.turkanabasin.org/2012/01/of-goats-and-grasshoppers/
+//https://en.wikipedia.org/wiki/Leatherback_sea_turtle
+//https://en.wikipedia.org/wiki/Red_squirrel
 // How much do butterflies weigh? The Children's Butterfly Site, https://www.kidsbutterfly.org/faq/general/11
+
+var animalData;
 
 d3.json("animals.json", function(data){
   console.log(data);
-  console.log(data[0]);
+  animalData = data;
+  setAnimalOptions();
+  getAnimalWeights();
 });
 
-var svg = d3.select("body").append("svg").attr("height","100%").attr("width","100%");
+var svg = d3.select("body").append("svg").attr("height","500%").attr("width","100%");
 
 var butterfly = 60;
 var imgs = svg.selectAll("image").data([0]);
 
-for(var i = 0; i < butterfly; i++){
-  imgs.enter().append("svg:image")
-    .attr("xlink:href","Butterfly.svg")
-    .attr("x", i * 11)
-    .attr("y", 0)
-    .attr("width", 10)
-    .attr("height", 10);
+var butterflyweight;
+
+function setAnimalOptions(){
+  for(i in animalData){
+    $("#animals").append("<option value="+animalData[i].name+">"+animalData[i].name +"</option>");
+  }
 }
 
-// .attr({
-//   'xlink:href': 'Butterfly.svg',  // can also add svg file here
-//   x: 0,
-//   y: 0,
-//   width: 128,
-//   height: 128
-// });
+function getAnimalWeights(){
+  for(i in animalData){
+    if(animalData[i].name == "butterflies"){
+      butterflyweight = animalData[i].weight;
+      console.log("butterfly");
+      console.log(butterflyweight);
+    }
+  }
+}
+
+function getAnimalWeight(animal){
+  for(i in animalData){
+    if(animalData[i].name == animal){
+      return animalData[i].weight;
+    }
+  }
+}
+
+var butterflies;
+var selectedAnimal;
+
+$("#submit").click(function(){
+  d3.selectAll("svg > *").remove();
+  console.log($("#weight").val());
+  selectedAnimal = $("#animals").val();
+  var human =  $("#weight").val();
+  var weight = getAnimalWeight(selectedAnimal);
+  amount = Math.round(human / weight);
+  console.log(amount);
+  drawAnimals(selectedAnimal, amount);
+});
+
+
+function drawAnimals(animal, amount){
+  svg.append("text")
+    .attr("x", 50)
+    .attr("y", 20)
+    .attr("font-family", "Comfortaa")
+    .attr("font-size", "20px")
+    .attr("fill", "black")
+    .text(amount +" " + animal );
+
+  var row = 0;
+
+  for(var i = 0; i < amount; i++){
+    imgs.enter().append("svg:image")
+      .attr("xlink:href","images/"+animal+".svg")
+      .attr("x", 20 + (i%50 * 30))
+      .attr("y", function(){if(i%50 == 0){row += 1;}; return 20 + (row * 30);})
+      .attr("width", 25)
+      .attr("height", 25)
+      .attr("class", animal);
+  }
+
+}
