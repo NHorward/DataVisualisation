@@ -43,6 +43,57 @@ Other: A.x D3.js
 
 ### Results
 A nice looking interactive heat map visualising Harold's running data, created with D3.js.
+An interesting poster to showcase at the Clash of Sounds.
 
 Please note that loading the CSV file doesn't work in Chrome and Internet Explorer, so the heat map doesn't show up.
 However, it does work nicely in Firefox and Microsoft Edge.
+
+## Assignment 3: Data sonification
+
+### Process
+
+### Goal
+
+### Properties
+Intent: A.1 Exploratory
+
+Media: B Auditive
+
+Appearance: A.2 Linear
+
+Other: A.x Node-based
+
+### Results
+
+## Assignment 4: Animal-O-Meter
+
+### Process
+I've always loved the interactive installations often seen in zoos, where you can weigh yourself and see how many times your body weight fits in an elephant.
+
+### Goal
+Create a version of this zoo installation, where people can compare their body weight to the weight of a number of animals.
+
+### Properties
+Intent: A.1 Explanatory
+
+Appearance: A.2 Interactive
+
+Other: A.x D3
+
+
+### Results
+An interactive webpage where you can select an animal and enter your weight, to see how many of an animal you are.
+The animals and their weights are dynamically loaded into the page, so it's easy to customize.
+
+## Assignment 5: ?
+
+### Process
+
+### Goal
+
+### Properties
+Intent: A.1 Exploratory
+
+Appearance: A.2 Interactive
+
+### Results
