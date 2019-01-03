@@ -3,7 +3,7 @@
   { "name":"cats", "weight": 4.05 },
   { "name":"crabs", "weight": 2.9 },
   { "name":"dogs", "weight": 22.6 },
-  { "name":"fish", "weight": 26 },
+  { "name":"fish", "weight": 0.130 },
   { "name":"mice", "weight": 0.019 },
   { "name":"owls", "weight": 0.525 },
   { "name":"rabbits", "weight": 1.8 },

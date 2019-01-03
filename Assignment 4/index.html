@@ -4,21 +4,31 @@
 		<meta charset="utf-8">
 		<title>Animal Counter</title>
 		<link href="https://fonts.googleapis.com/css?family=Comfortaa" rel="stylesheet">
-		<link rel="stylesheet" type="text/css" href="style.css" >
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
 		<script type="text/javascript" src="d3.v4.js"></script>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+		<link rel="stylesheet" type="text/css" href="style.css" >
 	</head>
-
 	<body>
- <p>How many <select name="animals" id="animals"></select>
-are you?</p>
-<p>
-		<form >
-  		Your weight in kg: <input type="text" name="weight" id="weight"><br>
-  		<button type="button" id="submit">Do the math!</button>
-		</form>
+		<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
 
-	</p>
+  <ul class="navbar-nav">
+    <li class="nav-item navbar-brand">Animal-o-meter
+    </li>
+  </ul>
+
+</nav>
+		<br>
+		<div class="form-group">
+		<p>How many	<select name="animals" id="animals" class="form-control"></select> are you? </p>
+
+		<form >
+  		<p> Your weight in kg: <input type="text" name="weight" id="weight" class="form-control"><br><br>
+  		<button type="button" id="submit" class="btn btn-primary">Do the math!</button> </p>
+		</form>
+	</div>
 		<script type="text/javascript" src="animals.js"></script>
   </body>
 

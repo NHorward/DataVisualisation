@@ -1,5 +1,5 @@
 // Assignment 2 - Harold the Hamster
-// Nicole Horward 2018
+// Nicole Horward 2018-2019
 //Sources:
 // Lynda D3 JS Essential Training for Data Scientists https://www.lynda.com/D3-js-tutorials/D3-js-Essential-Training-Data-Scientists/504428-2.html Date of reference: 26th of November 2018
 // Building a simple heat map with D3, Jeffrey Everhart via  https://jeffreyeverhart.com/2016/03/12/heat-map-d3/ Date of reference: 26th of November 2018
