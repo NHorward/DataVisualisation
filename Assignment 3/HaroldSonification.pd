@@ -1,0 +1,106 @@
+#N canvas 0 0 1920 976 16;
+#X obj 48 139 textfile;
+#X msg 83 75 read \$1 cr;
+#X msg -73 94 print;
+#X floatatom 48 210 7 0 0 0 - - -;
+#X msg -14 -3 rewind;
+#X obj -73 -11 bng 25 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj -122 -89 metro 500;
+#X obj -122 -151 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1
+1 1;
+#X floatatom -35 -148 5 0 0 0 - - -;
+#X obj 82 -66 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 82 -137 loadbang;
+#X obj 504 142 soundfiler;
+#X floatatom 505 239 10 0 0 0 - - -;
+#X obj 642 239 expr 44100 / $f1;
+#X floatatom 658 308 5 0 0 0 - - -;
+#X obj 503 -83 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 503 -137 loadbang;
+#N canvas 0 0 450 300 (subpatch) 0;
+#X array Running 125444 float 2;
+#X coords 0 1 125444 -1 200 140 1;
+#X restore 196 488 graph;
+#X obj 351 72 hsl 128 15 -10 10 0 0 empty empty empty -2 -8 0 10 -262144
+-1 -1 6941 1;
+#X floatatom 348 122 5 0 0 0 - - -;
+#X text 361 42 Speeeeeed;
+#X obj 557 488 phasor~;
+#X obj 615 561 *~ 1;
+#X obj 923 735 *~;
+#X obj 900 790 dac~;
+#X obj 695 173 s RobotSamples;
+#X obj 681 488 r RobotSamples;
+#X floatatom 557 389 5 0 0 0 - - -;
+#X obj 557 328 f;
+#X obj 523 283 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 1004 251 vsl 15 128 0.01 1 1 0 empty empty empty 0 -9 0 10 -262144
+-1 -1 7300 1;
+#X floatatom 1004 432 5 0 0 0 - - -;
+#X obj 1004 572 line~;
+#X msg 1004 490 \$1 25;
+#X obj 348 183 t b f;
+#X obj 557 438 * 2;
+#X obj 195 639 hsl 200 15 0 1 0 0 empty empty empty -2 -8 0 10 -262144
+-1 -1 8845 1;
+#X obj 411 650 snapshot~;
+#X text 411 605 Audio naar control;
+#X obj 411 557 metro 25;
+#X obj 411 494 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+1;
+#X text 518 104 Resize aan de hand van lengte sample;
+#X msg 503 73 read -resize \$1 Running;
+#X msg 503 -28 open runninggravel.wav;
+#X obj 348 13 r Harold;
+#X obj 43 282 s Harold;
+#X msg 82 7 open harolddata.txt;
+#X obj 616 622 tabread4~ Running;
+#X connect 0 0 3 0;
+#X connect 0 1 4 0;
+#X connect 1 0 0 0;
+#X connect 2 0 0 0;
+#X connect 3 0 45 0;
+#X connect 4 0 0 0;
+#X connect 5 0 0 0;
+#X connect 6 0 5 0;
+#X connect 7 0 6 0;
+#X connect 8 0 6 1;
+#X connect 9 0 46 0;
+#X connect 10 0 9 0;
+#X connect 11 0 12 0;
+#X connect 11 0 13 0;
+#X connect 11 0 25 0;
+#X connect 13 0 14 0;
+#X connect 13 0 28 1;
+#X connect 15 0 43 0;
+#X connect 16 0 15 0;
+#X connect 18 0 19 0;
+#X connect 19 0 34 0;
+#X connect 21 0 22 0;
+#X connect 21 0 37 0;
+#X connect 22 0 47 0;
+#X connect 23 0 24 0;
+#X connect 23 0 24 1;
+#X connect 26 0 22 1;
+#X connect 27 0 35 0;
+#X connect 28 0 27 0;
+#X connect 29 0 28 0;
+#X connect 30 0 31 0;
+#X connect 31 0 33 0;
+#X connect 32 0 23 1;
+#X connect 33 0 32 0;
+#X connect 34 0 29 0;
+#X connect 34 1 35 1;
+#X connect 35 0 21 0;
+#X connect 37 0 36 0;
+#X connect 39 0 37 0;
+#X connect 40 0 39 0;
+#X connect 42 0 11 0;
+#X connect 43 0 42 0;
+#X connect 44 0 18 0;
+#X connect 46 0 1 0;
+#X connect 47 0 23 0;
