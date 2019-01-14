@@ -13,8 +13,8 @@
 // Round sardinella, Wikipedia, https://en.wikipedia.org/wiki/Round_sardinella Date of Reference: 25th of December 2018.
 // Leatherback sea turtle, Wikipedia, https://en.wikipedia.org/wiki/Leatherback_sea_turtle Date of Reference: 25th of December 2018.
 // Red squirrel, Wikipedia, https://en.wikipedia.org/wiki/Red_squirrel Date of Reference: 25th of December 2018.
-// Medium dog breeds, Your Pure Bred Puppy, https://www.yourpurebredpuppy.com/dogbreeds/index-medium-dog-breeds.html
-// How much do butterflies weigh? The Children's Butterfly Site, https://www.kidsbutterfly.org/faq/general/11
+// Medium dog breeds, Your Pure Bred Puppy, https://www.yourpurebredpuppy.com/dogbreeds/index-medium-dog-breeds.html Date of Reference: 25th of December 2018.
+// How much do butterflies weigh? The Children's Butterfly Site, https://www.kidsbutterfly.org/faq/general/11  Date of Reference: 25th of December 2018.
 
 var animalData;
 var selectedAnimal;

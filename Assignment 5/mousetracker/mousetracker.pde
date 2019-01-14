@@ -12,8 +12,9 @@ int pmouseY;
 int startmouseX = 0;
 int startmouseY = 0;
 
-float size = 0.1;
+float size = 0.01;
 float hue;
+
 String filename;
 
 Point mouse;
@@ -43,7 +44,7 @@ void draw() {
   if(pmouseX == mouse.x && pmouseY == mouse.y){
     // Set the colour and stroke
      stroke(hue, hue, hue, 20);
-     strokeWeight(10);
+     strokeWeight(5);
      
      // Draw a line from the previous point where the mouse was stationary, to the current place
      line(startmouseX, startmouseY, mouse.x, mouse.y);
@@ -55,7 +56,7 @@ void draw() {
      // Draw a circle on the mouse point
      ellipse(mouse.x, mouse.y, size, size);
      // The longer the mouse is in the same position, the bigger the circle will get
-     size += 0.1;
+     size += 0.01;
      
      // Reset the start mouse positions
      startmouseX = mouse.x;
@@ -63,7 +64,7 @@ void draw() {
     } 
   else{
     // If the mouse has been moved, reset the size of the circle
-    size = 0.1;
+    size = 0.01;
     }
   
   // Set a random colour 
