@@ -21,7 +21,9 @@ Appearance: A.2 Static
 Other: A.x 3D
 
 ### Results
-It's looking good so far, but it's still a work in progress. I'll keep you posted!
+A 3D printed map of Belgium, showcasing the absolute number of Nicole's per province. The height of each province correlates with the amount of Nicole's living there in 2017.
+
+![The Nicole-O-Meter ](Images/NicoleOMeterTop.jpg)
 
 ### Sources
 [Voornamen van de totale bevolking per gemeente, STATBEL.](https://statbel.fgov.be/nl/open-data/voornamen-van-de-totale-bevolking-gemeente)  Date of reference: 14th of October 2018.
