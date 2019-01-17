@@ -49,7 +49,7 @@ Appearance: A.2 Linear / Interactive
 Other: A.x D3.js
 
 ### Results
-A nice looking interactive heat map visualising Harold's running data, created with D3.js.
+An interactive heat map visualising Harold's running data, created using D3.js.
 
 An interesting poster to showcase at the Clash of Sounds.
 
@@ -87,8 +87,8 @@ Appearance: A.2 Linear
 Other: A.x Node-based
 
 ### Results
-The result is a sonification of Harold's runs in his hamster wheel. The more he ran per hour, the faster the running sounds.
-You can listen to it [here.](Assignment 3/HaroldRunning.wav) Below is the waveform of the data sonification, created using [this waveform generation website.](http://convert.ing-now.com/generate-a-waveform-image-from-an-audio-file/)
+The result is a sonification of Harold's runs in his hamster wheel, made with Pure Data. The more he runs per hour, the faster the running sounds are.
+Below is the waveform of the data sonification, created using [this waveform generation website.](http://convert.ing-now.com/generate-a-waveform-image-from-an-audio-file/) A .wav file of the sonification can be found in the folder Assignment 3.
 
 ![The waveform of Harold the Hamster's running data'. ](Images/HaroldWaveform.png)
 
@@ -115,7 +115,7 @@ Other: A.x D3
 
 ### Results
 An interactive webpage where you can select an animal and enter your weight, to see how many of an animal you are.
-The animals and their weights are dynamically loaded into the page, so it's easy to customize.
+The animals and their weights are dynamically loaded into the page, so it's easy to customize. The visualisation was made using D3.js.
 
 ![A screenshot of the Animal-O-Meter](Images/AnimalOMeter.png)
 
@@ -142,7 +142,7 @@ The animals and their weights are dynamically loaded into the page, so it's easy
 Like a lot of people, I use my computer most of the day. What if I could create art whilst going about my daily business?
 
 ### Goal
-The goal is to capture the movements of my mouse on the computer screen, and visualize them in an interesting way.
+The goal is to capture the movements of the mouse on the computer screen, and visualize them in an interesting way.
 
 ### Properties
 Intent: A.1 Exploratory
@@ -150,7 +150,7 @@ Intent: A.1 Exploratory
 Appearance: A.2 Interactive
 
 ### Results
-The result is a Processing program that tracks the movements of my mouse and visualises it, as displayed below.
+The result is a Processing program that tracks mouse movements and visualises it, as displayed below.
 
 ![An example of the Mouse-O-Meter](Images/MouseMeter.png)
 
